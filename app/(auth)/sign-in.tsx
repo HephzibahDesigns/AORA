@@ -1,11 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignIn = () => {
   return (
-    <View>
-      <Text>sign-in</Text>
-    </View>
+    <SafeAreaView className="flex flex-1 bg-primary">
+      <View>
+        <Text className="text-white">Sign In</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 

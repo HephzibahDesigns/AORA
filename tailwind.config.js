@@ -15,7 +15,7 @@ module.exports = {
           100: "#1E1E2D",
           200: "#232533",
         },
-        gray: {
+        grey: {
           100: "#CDCDE0",
         },
         backgroundImage: {
@@ -26,7 +26,6 @@ module.exports = {
       fontFamily: {
         poppinsThin: ["Poppins_100Thin"],
         poppinsExtraLight: ["Poppins_200ExtraLight"],
-        poppinsLight: ["Poppins_300Light"],
         poppinsRegular: ["Poppins_400Regular"],
         poppinsMedium: ["Poppins_500Medium"],
         poppinsSemiBold: ["Poppins_600SemiBold"],

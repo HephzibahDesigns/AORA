@@ -15,6 +15,7 @@ import {
 
 import * as SplashScreen from "expo-splash-screen";
 import { ActivityIndicator, View, Text } from "react-native";
+import { UserProvider } from "@/lib/appwrite";
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
@@ -72,15 +73,19 @@ export default function RootLayout() {
   }
 
   return (
-    <Fragment>
-      <StatusBar style="auto" />
-      <Stack
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="index" />
-      </Stack>
-    </Fragment>
+    <UserProvider>
+      <Fragment>
+        <StatusBar style="auto" />
+        <Stack
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="index" />
+          <Stack.Screen name="(auth)" />
+          <Stack.Screen name="(tabs)" />
+        </Stack>
+      </Fragment>
+    </UserProvider>
   );
 }

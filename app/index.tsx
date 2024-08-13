@@ -5,12 +5,13 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import LogoHeader from "./component/LogoHeader";
 import Button from "./component/Button";
+import { UserProvider } from "@/lib/appwrite";
 
 const App = () => {
   const router = useRouter();
 
   const goToHome = () => {
-    router.push("/sign-up");
+    router.push("/sign-in");
   };
   return (
     <SafeAreaView className="flex-1 bg-primary">

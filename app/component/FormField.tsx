@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, TextInput, Image, Pressable } from "react-native";
 import React, { useState } from "react";
 
 interface FormFieldProps {
@@ -36,7 +36,7 @@ const FormField: React.FC<FormFieldProps> = ({
         />
 
         {secureTextEntry && (
-          <TouchableOpacity
+          <Pressable
             onPress={() => setIsPasswordVisible(!isPasswordVisible)}
             className="absolute right-4 top-[40%] transform -translate-y-1/2"
           >
@@ -48,7 +48,7 @@ const FormField: React.FC<FormFieldProps> = ({
               }
               style={{ width: 24, height: 24, tintColor: "white" }}
             />
-          </TouchableOpacity>
+          </Pressable>
         )}
       </View>
     </View>
